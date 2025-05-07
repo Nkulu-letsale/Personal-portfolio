@@ -1,0 +1,646 @@
+/* Basic CSS Reset */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #333, #444);
+    color: #fff;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+header:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.topnav-left {
+    padding-left: 20px;
+}
+
+.topnav-right {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: inline-block; /* Make the a tag a block element */
+}
+
+nav ul li a:hover {
+    color: #bbb;
+    border-color: #bbb;
+    transform: scale(1.1);
+}
+
+/* Theme Toggle Button Styles */
+.theme-toggle-button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+}
+
+.theme-toggle-button:hover {
+    color: #bbb;
+    transform: rotate(360deg);
+}
+
+/* Home Section Styles */
+#home {
+    padding: 40px 20px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #f4f4f4, #fff);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.profile-picture:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* Add glow effect on hover */
+.profile-picture:hover {
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.7); /* Dark blue glow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+#home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#home p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* About Section Styles */
+#about {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #f9f9f9, #eee);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideInLeft 1s ease-in-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#about h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+#about .profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    object-fit: cover;
+    margin-right: 20px;
+    float: left;
+    transition: transform 0.3s ease;
+}
+
+#about .profile-picture:hover {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.bio {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.bio:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.bio h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.bio p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.contact {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Skills Section Styles */
+#skills {
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #fff, #f4f4f4);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideInRight 1s ease-in-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    gap: 20px; /* Add some space between the skill boxes */
+}
+
+.skills-list {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.skills-list h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.skills-list ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Make the list a flex container */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center the items horizontally */
+    gap: 20px; /* Add spacing between the skill boxes */
+}
+
+.skills-list li {
+    margin-bottom: 0; /* Remove default bottom margin */
+    padding: 0; /* Remove padding from the list item itself */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(50% - 20px); /* Set a width for each skill box (adjust as needed) */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    text-align: center; /* Center the content within the skill box */
+}
+
+/* Style for the skill box */
+.skill-box {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-list li:hover .skill-box { /* Hover applies to the skill-box */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.skills-list li h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    text-align: center; /* Center the heading */
+    color: #333;
+}
+
+.skills-list li p {
+    font-size: 1rem;
+    color: #666;
+    text-align: center; /* Center the paragraph */
+}
+
+/* Style for the skill details */
+.skill-details {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* Projects Section Styles */
+#projects {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #f4f4f4, #ddd);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#projects .skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+#projects .skills-list {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+#projects .skills-list h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#projects .skills-list ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#projects .skills-list li {
+    margin-bottom: 0;
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+/* Style for the project box */
+.project-box {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+#projects .skills-list li:hover .project-box {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+#projects .skills-list img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#projects .skills-list a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#projects .skills-list a:hover {
+    text-decoration: underline;
+}
+
+.fa {
+    margin-right: 8px;
+}
+
+/* Contact Section Styles */
+#contact {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #f4f4f4, #ddd);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#contact h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.5); /* Blue glow on hover */
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #007bff;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+footer:hover {
+    transform: translateY(2px);
+    box-shadow: 0 -6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.social-media {
+    margin-bottom: 15px;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.social-media a:hover {
+    color: #bbb;
+    transform: scale(1.2);
+}
+
+/* Dark Theme Styles */
+body.dark-theme header,
+body.dark-theme #home,
+body.dark-theme #about,
+body.dark-theme #skills,
+body.dark-theme #projects,
+body.dark-theme #contact,
+body.dark-theme footer {
+    border-radius: 0; /* Remove rounded corners in dark mode */
+}
+
+body.dark-theme {
+    background-color: #000; /* True black background */
+    color: #fff; /* White text */
+}
+
+body.dark-theme #about {
+    background-color: #111; /* Slightly lighter than true black for definition */
+}
+
+body.dark-theme .bio {
+    background-color: #222; /* Even lighter for contrast */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    color: #eee;
+}
+
+body.dark-theme .bio h2 {
+    color: #fff; /* Ensure bio subheadings are readable in dark mode */
+}
+
+body.dark-theme .skills-list li {
+    background-color: transparent; /* Make li background transparent */
+    border-color: #555;
+    color: #eee;
+}
+
+body.dark-theme .skills-list li h3 {
+    color: #ddd; /* Make subheadings more visible in dark mode */
+}
+
+body.dark-theme #contact {
+    background-color: #000;
+}
+
+body.dark-theme .contact-card {
+    background-color: #222;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.5); /* Glowing effect */
+    color: #eee;
+}
+
+body.dark-theme .contact-card:hover {
+    box-shadow: 0 0 30px rgba(0, 123, 255, 0.7); /* Stronger glow on hover */
+}
+
+body.dark-theme input,
+body.dark-theme textarea {
+    background-color: #333;
+    color: #eee;
+    border-color: #555;
+}
+
+/* Dark Theme Skill Box Styles */
+body.dark-theme .skill-box {
+    background-color: #111; /* Dark background for skill boxes */
+    border-color: #333;
+    box-shadow: none; /* Remove default box-shadow */
+}
+
+body.dark-theme .skills-list li:hover .skill-box {
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3); /* Add a subtle blue glow on hover */
+}
+
+/* Dark Theme Project Box Styles */
+body.dark-theme .project-box {
+    background-color: #111;
+    border-color: #333;
+    box-shadow: none;
+    color: #eee;
+}
+
+body.dark-theme #projects .skills-list li:hover .project-box {
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .topnav-left,
+    .topnav-right {
+        padding:
